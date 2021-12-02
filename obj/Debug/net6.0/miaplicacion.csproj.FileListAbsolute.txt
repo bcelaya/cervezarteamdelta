@@ -1,0 +1,2 @@
+C:\Users\bcelayam\miaplicacion\bin\Debug\net6.0\miaplicacion.exe
+C:\Users\bcelayam\miaplicacion\bin\Debug\net6.0\miaplicacion.dll
