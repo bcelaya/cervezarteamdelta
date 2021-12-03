@@ -15,5 +15,11 @@ public class FormularioModel : PageModel
     public void OnGet()
     {
     }
+
+    public void OnClick()
+    {
+        //Recoger los datos que necesites
+        // LLame a la función de insertar los ratos
+    }
 }
 
