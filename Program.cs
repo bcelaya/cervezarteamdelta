@@ -1,11 +1,15 @@
 using System;
 using System.Data.SqlClient;
 using System.Text;
+using cervezarteamdelta.Models;
 
 namespace sqltest
 {
     class Program
     {
+        public static void AllValues(){
+
+        }
         static void Main(string[] args)
         {
             try 
@@ -16,6 +20,8 @@ namespace sqltest
                 builder.UserID = "rootvali";            
                 builder.Password = "Password1234";     
                 builder.InitialCatalog = "validation-paas";
+
+                List<Codes> listCodes = new List<Codes>();
          
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
@@ -24,7 +30,7 @@ namespace sqltest
                     
                     connection.Open();       
 
-                    String sql = "SELECT name, collation_name FROM sys.databases";
+                    String sql = "SELECT * FROM Codes";                    
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
@@ -32,16 +38,32 @@ namespace sqltest
                         {
                             while (reader.Read())
                             {
-                                Console.WriteLine("{0} {1}", reader.GetString(0), reader.GetString(1));
+                                Codes codes = new Codes();
+                                codes.Code = Convert.ToInt32(reader[0]);
+                                codes.Email = reader[1].ToString();
+                                codes.User = reader[2].ToString();
+                                codes.Name = reader[3].ToString();
+                                codes.Check_Used = Convert.ToBoolean(reader[4]);
+
+                                if(reader[5] != DBNull.Value){
+                                    codes.Date_asignment = Convert.ToDateTime(reader[5]);
+                                }                                
+                                listCodes.Add(codes);
                             }
                         }
                     }                    
                 }
+                foreach(Codes c in listCodes){
+                    Console.WriteLine(c.Code);
+                    //Console.WriteLine("{0} {1}", c.Code, c.Check_Used);
+                }
+                
             }
             catch (SqlException e)
             {
                 Console.WriteLine(e.ToString());
             }
+            
             Console.WriteLine("\nDone. Press enter.");
             Console.ReadLine(); 
         }
