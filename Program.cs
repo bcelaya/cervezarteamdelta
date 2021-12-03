@@ -7,9 +7,6 @@ namespace sqltest
 {
     class Program
     {
-        public static void AllValues(){
-
-        }
         static void Main(string[] args)
         {
             try 
