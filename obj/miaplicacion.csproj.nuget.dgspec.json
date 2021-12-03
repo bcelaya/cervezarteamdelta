@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bcelayam\\miaplicacion\\miaplicacion.csproj": {}
+    "/home/r/build/azure/cervezarteamdelta/miaplicacion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bcelayam\\miaplicacion\\miaplicacion.csproj": {
+    "/home/r/build/azure/cervezarteamdelta/miaplicacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bcelayam\\miaplicacion\\miaplicacion.csproj",
+        "projectUniqueName": "/home/r/build/azure/cervezarteamdelta/miaplicacion.csproj",
         "projectName": "miaplicacion",
-        "projectPath": "C:\\Users\\bcelayam\\miaplicacion\\miaplicacion.csproj",
-        "packagesPath": "C:\\Users\\bcelayam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bcelayam\\miaplicacion\\obj\\",
+        "projectPath": "/home/r/build/azure/cervezarteamdelta/miaplicacion.csproj",
+        "packagesPath": "/home/r/.nuget/packages/",
+        "outputPath": "/home/r/build/azure/cervezarteamdelta/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bcelayam\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/r/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }
