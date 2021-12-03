@@ -42,9 +42,46 @@ namespace cervezarteamdelta.DAC{
             
             return listCodes;
         }
-        public Boolean InsertDataInCode(string user){
+        public Boolean InsertDataInCode(Codes codes)
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            bool finalExec = false;
+
+            //TODO: La configuración se guarda en el entorno.
+            builder.DataSource = "validationpaas.database.windows.net"; 
+            builder.UserID = "rootvali";            
+            builder.Password = "Password1234";     
+            builder.InitialCatalog = "validation-paas";
             
-            return true;
+
+            using(SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {                
+                using(SqlCommand command = connection.CreateCommand())
+                {
+                    //TODO: si existe hace el update
+                    command.CommandText = "UPDATE Codes SET Email = @email, [User] = @user, [Name] = @name, Check_Used = 1, Date_asignment =  @date_asignement Where Code = @code";
+
+                    command.Parameters.AddWithValue("@code", codes.Code);
+                    command.Parameters.AddWithValue("@email", codes.Email);
+                    command.Parameters.AddWithValue("@name", codes.Name);
+                    command.Parameters.AddWithValue("@user", codes.User);
+                    command.Parameters.AddWithValue("@check_used", 1);
+                    command.Parameters.AddWithValue("@date_asignement", codes.Date_asignment);
+
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+
+                    // Check Error
+                    if(result < 0){
+                        finalExec = false;
+                    }
+                    else
+                    {
+                        finalExec= true;
+                    }                        
+                }
+            }
+            return finalExec;
         }
     }
 
