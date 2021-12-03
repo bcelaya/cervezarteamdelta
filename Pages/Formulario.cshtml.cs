@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace testingapp.Pages;
+namespace miaplicacion.Pages;
 
 public class FormularioModel : PageModel
 {
