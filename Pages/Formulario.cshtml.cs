@@ -3,17 +3,17 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace testingapp.Pages;
 
-public class IndexModel : PageModel
+public class FormularioModel : PageModel
 {
-    private readonly ILogger<IndexModel> _logger;
+    private readonly ILogger<FormularioModel> _logger;
 
-    public IndexModel(ILogger<IndexModel> logger)
+    public FormularioModel(ILogger<FormularioModel> logger)
     {
         _logger = logger;
     }
 
     public void OnGet()
     {
-
     }
 }
+

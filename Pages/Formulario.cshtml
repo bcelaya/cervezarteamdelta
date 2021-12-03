@@ -1,0 +1,17 @@
+﻿@page
+@model FormularioModel
+@{
+    ViewData["Title"] = "Formulario";
+}
+<h1>@ViewData["Title"]</h1>
+<form>
+  <div class="form-group">
+      <div class="col">
+        <label for="comprobarcodigos">Introduce código</label>
+        <input type="text" class="form-control" id="barracodigos" aria-describedby="emailHelp" placeholder="Introduce código">
+      </div>
+    <small id="emailHelp" class="form-text text-muted">Introduce el código obtenido en su cerveza.</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
