@@ -1,11 +1,24 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
-    ViewData["prueba"] = "Esto es un movidon";
+    ViewData["Title"] = "Validación códigos cerveza - TEAM DELTA";
+   
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div class="card card-signin my-5">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Validación cerveza</h5>
+                            <form class="form-signin">
+                                <div class="form-label-group"> <input type="email" id="inputEmail" class="form-control" placeholder="" required autofocus> <label for="inputEmail">Correo electrónico (e-mail)</label> </div>
+                                <div class="form-label-group"> <input type="password" id="inputPassword" class="form-control" placeholder="" required> <label for="inputPassword">Contraseña</label> </div>
+                                <div class="custom-control custom-checkbox mb-3"> <input type="checkbox" class="custom-control-input" id="customCheck1"> <label class="custom-control-label" for="customCheck1">He olvidado mi contraseña</label> </div> <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Enviar</button>
+                                <hr class="my-4"> <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Entrar con mi cuenta de Google</button> <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Entrar con mi cuenta de Facebook</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 </div>
